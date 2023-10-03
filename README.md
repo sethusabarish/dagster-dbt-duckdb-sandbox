@@ -21,7 +21,9 @@ These folders are externally mounted to container so it can be persisted for re-
 
 1 - Download raw datasets manually or add scripts to this repo
 2 - Run `initialize.sh` to setup the sandbox
-3 - Develop projects within `src` folder via DBT and Dagster
-4 - Materialize dagster assets via Dagster UI
+3 - Place the dataset within the `/data/raw` folder or add an asset to auto-ingest into the `/data/raw` folder
+4 - Develop projects within `src` folder via DBT and Dagster
+5 - DBT packages include `dbt-expectations` to rich test cases
+6 - Materialize dagster assets via Dagster UI
 
 Inspired by this [dbt-dagster tutorial](https://docs.dagster.io/integrations/dbt/using-dbt-with-dagster)

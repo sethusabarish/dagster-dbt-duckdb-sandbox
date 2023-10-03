@@ -5,15 +5,19 @@ FROM python:3.10-slim
 RUN apt update
 RUN apt-get install -y python3-pip python3 python3-dev bash wget
 RUN pip3 install --upgrade pip
-RUN pip3 install duckdb
+RUN pip3 install 
 RUN pip3 install dbt-core dbt-duckdb
 
 RUN pip install \
     dagster \
+    duckdb \
+    dbt-duckdb \
+    dbt-core \
     dagster-graphql \
     dagster-webserver \
     dagster-postgres \
-    dagster-docker
+    dagster-docker \
+    dagster-dbt
 
 # Uncomment this if duckdb isn't made available before
 # RUN wget https://github.com/duckdb/duckdb/releases/download/v0.9.0/duckdb_cli-linux-amd64.zip

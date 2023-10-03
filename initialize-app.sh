@@ -10,10 +10,10 @@ PROJECT_NAME_PROD='dagster-dbt-duckdb-sandbox'
 
 ##################################################
 ### Edit to the directory where repo is cloned####
-PROJECT_HOME='D:\\base\\repos\\'$PROJECT_NAME_PROD
+BASE_PATH='D:\\base\\repos\\'$PROJECT_NAME_PROD
 ##################################################
 
-
+PROJECT_HOME=$BASE_PATH'\\'$PROJECT_NAME_PROD
 PROJECT_NAME_PROD_IMAGE=$PROJECT_NAME_PROD'_image:latest'
 
 

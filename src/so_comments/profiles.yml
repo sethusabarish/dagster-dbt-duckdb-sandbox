@@ -1,0 +1,7 @@
+so_comments:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /data/duckdb/so_comments.duckdb
+      threads: 24

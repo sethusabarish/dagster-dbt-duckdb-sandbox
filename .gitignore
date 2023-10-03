@@ -2,3 +2,4 @@ config_template.xml
 Jenkinsfile
 apps/*
 data/*
+src/logs

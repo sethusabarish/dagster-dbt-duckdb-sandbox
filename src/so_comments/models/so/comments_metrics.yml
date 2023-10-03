@@ -1,0 +1,20 @@
+version: 1
+
+models:
+  - name: comments_metrics
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: 'active_users > 10 and posts_count > 10'
+    columns:
+      - name: month
+        description: Month for which the metrics is computed
+        tests:
+          - not_null
+          - unique
+      - name: active_users
+        description: Active commeners for the month
+        tests:
+          - not_null
+      - name: posts_count
+        description: Total Number of posts commented for the month
+          - not_null
