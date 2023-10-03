@@ -1,6 +1,6 @@
-# DAGSTER-DBT-DUCKDB-SANDBOX
+# 3D SANDBOX (DAGSTER-DBT-DUCKDB)
 
-A sandbox pipeline to explore the portable MDS. It can be used to build and test ETL pipelines or maintaining a mini-warehouse
+A portable easy running sandbox stack (made of Dagster - DBT - Duckdb) to build and test ETL pipelines or maintaining a mini-warehouse
 
 ## Components
 
@@ -16,6 +16,16 @@ These folders are externally mounted to container so it can be persisted for re-
 - `src` - DBT and Dagster Assets reside here. Can house multiple projects under same folder
 - `apps` - duckdb is downloaded and persisted here for the first time (Deatils are in `initialize.sh`)
 - `data` - data folder to house raw datasets (Input), duckdb files and any output files that are generated
+
+## Pipeline Context
+
+The sample dataset contains sample comments dataset from the [Stackoverflow dumps](https://archive.org/details/stackexchange) in the form of XML. A DBT model is created
+to compute simple metrics like Active users, post count over the dataset.
+
+1. `raw_comments` - parse the input XML file and generate the raw datasets in duckdb
+2. `comments_metrics` - compute metrics and apply tests
+
+![Alt text](image.png)
 
 ## Running the piipelines
 
